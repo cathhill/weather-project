@@ -19,7 +19,7 @@ li {
 .container {
   border: blue solid 2px;
   padding: 20px;
-  margin: 30px;
+  margin: 30px 30px 15px 30px;
   border-radius: 10px;
 }
 .city {
@@ -61,4 +61,9 @@ li {
 .cloud-sun {
   font-size: 100px;
   color: rgb(255, 230, 0);
+}
+
+footer {
+  margin: 0 30px;
+  font-size: 12px;
 }
