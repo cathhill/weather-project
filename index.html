@@ -4,11 +4,107 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="index.js"></script>
     <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/c31c5809c3.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
-    <h1>Hello</h1>
+    <div class="container">
+      <form class="search-form" id="search-form">
+        <div class="row">
+          <div class="col-6">
+            <input
+              type="search"
+              class="form-control choose-city shadow-sm"
+              placeholder="Choose City"
+              autofocus="on"
+              autocomplete="off"
+              id="city-input"
+            />
+          </div>
+
+          <div class="col-3">
+            <input
+              type="submit"
+              value="Search"
+              class="form-control btn btn-primary change-city shadow-sm"
+            />
+          </div>
+
+          <div class="col-3">
+            <input
+              type="submit"
+              value="Current"
+              class="form-control btn btn-primary current-city shadow-sm"
+            />
+          </div>
+        </div>
+      </form>
+
+      <h2 class="city">Sevenoaks</h2>
+      <ul>
+        <li id="current-date">date</li>
+        <li id="description">partly cloudy</li>
+      </ul>
+      <div class="row today">
+        <div class="col-3">
+          <i class="fas fa-cloud-sun cloud-sun"></i>
+        </div>
+        <div class="col-3">
+          <h1>
+            <span id="today-temp">20</span>
+            <span id="units">
+              <a href="#" id="celsius-temperature"> °C </a>
+              |
+              <a href="#" id="fahrenheit-temperature"> °F </a>
+            </span>
+          </h1>
+        </div>
+        <div class="col-3">Wind<br />Humidity</div>
+        <div class="col-3">
+          <span id="wind">10m/s</span>
+          <br />
+          <span id="humidity">70%</span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">Monday</div>
+        <div class="col">Tuesday</div>
+        <div class="col">Wednesday</div>
+        <div class="col">Thursday</div>
+        <div class="col">Friday</div>
+      </div>
+      <div class="row">
+        <div class="col"><img src="images/partly_cloudy.png" /></div>
+        <div class="col"><img src="images/partly_cloudy.png" /></div>
+        <div class="col"><img src="images/partly_cloudy.png" /></div>
+        <div class="col"><img src="images/partly_cloudy.png" /></div>
+        <div class="col"><img src="images/partly_cloudy.png" /></div>
+      </div>
+      <div class="row">
+        <div class="col">21°</div>
+        <div class="col">22°</div>
+        <div class="col">23°</div>
+        <div class="col">21°</div>
+        <div class="col">20°</div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
   </body>
 </html>

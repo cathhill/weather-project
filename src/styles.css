@@ -1,0 +1,64 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  margin-bottom: 0;
+  font-size: 70px;
+}
+
+ul {
+  margin: 0 0 10px;
+  padding: 0;
+}
+li {
+  list-style: none;
+  font-size: 16px;
+}
+
+.container {
+  border: blue solid 2px;
+  padding: 20px;
+  margin: 30px;
+  border-radius: 10px;
+}
+.city {
+  padding: 20px 0;
+}
+
+.choose-city {
+  text-align: left;
+  display: inline;
+  vertical-align: middle;
+}
+
+.change-city {
+}
+
+.col {
+  text-align: center;
+}
+
+.col-3 {
+  text-align: left;
+}
+
+.today {
+  width: 100%;
+  margin: 40px 20px;
+}
+
+.today-temp {
+  font-size: 80px;
+}
+
+#units {
+  font-size: 15px;
+  position: relative;
+  top: -40px;
+}
+
+.cloud-sun {
+  font-size: 100px;
+  color: rgb(255, 230, 0);
+}
