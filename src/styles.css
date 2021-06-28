@@ -76,3 +76,12 @@ footer {
   margin: 0 30px;
   font-size: 12px;
 }
+#units .active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+
+#units .active:hover {
+  text-decoration: none;
+}
