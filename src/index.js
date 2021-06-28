@@ -22,7 +22,6 @@ date.innerHTML = `${currentDay} ${hours}:${minutes}`;
 //Choosing a city
 function changeCity(event) {
   event.preventDefault();
-
   let cityInput = document.querySelector("#city-input");
   let apiKey = "66decd6fe52d82f120eb1be8f6e6d5d8";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&appid=${apiKey}&units=metric`;
@@ -38,15 +37,30 @@ function showTemperature(response) {
   let humidity = document.querySelector("#humidity");
   let wind = document.querySelector("#wind");
   let description = document.querySelector("#description");
+  let iconElement = document.querySelector("#current-icon");
   city.innerHTML = response.data.name;
   humidity.innerHTML = `${response.data.main.humidity}%`;
-  wind.innerHTML = `${response.data.wind.speed}m/s`;
+  wind.innerHTML = `${response.data.wind.speed}`;
   description.innerHTML = response.data.weather[0].description;
   temperature.innerHTML = currentTemp;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 let selectCity = document.querySelector(".search-form");
 selectCity.addEventListener("submit", changeCity);
+
+function defaultCity() {
+  let cityInput = "London";
+  let apiKey = "66decd6fe52d82f120eb1be8f6e6d5d8";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&appid=${apiKey}&units=metric`;
+  let city = document.querySelector("h2");
+  city.innerHTML = cityInput.value;
+  axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature);
+}
 
 //Local weather
 function localCity(event) {
@@ -70,11 +84,17 @@ function showLocalTemperature(response) {
   let humidity = document.querySelector("#humidity");
   let wind = document.querySelector("#wind");
   let description = document.querySelector("#description");
+  let iconElement = document.querySelector("#current-icon");
   city.innerHTML = response.data.name;
   humidity.innerHTML = `${response.data.main.humidity}%`;
   wind.innerHTML = `${response.data.wind.speed}m/s`;
   description.innerHTML = response.data.weather[0].description;
   temperature.innerHTML = currentTemp;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 let currentCity = document.querySelector(".current-city");

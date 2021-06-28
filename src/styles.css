@@ -47,6 +47,11 @@ li {
   text-transform: capitalize;
 }
 
+#current-icon {
+  width: 100px;
+  height: 100px;
+}
+
 .today {
   width: 100%;
   margin: 40px 20px;
