@@ -85,3 +85,16 @@ footer {
 #units .active:hover {
   text-decoration: none;
 }
+
+.weather-forecast {
+  text-align: center;
+}
+
+.weather-forecast-day {
+}
+.weather-forecast-temperatures {
+}
+
+.weather-forecast-min {
+  opacity: 0.5;
+}
