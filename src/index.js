@@ -19,18 +19,17 @@ date.innerHTML = `${currentDay} ${hours}:${minutes}`;
 function submitCity(event) {
   event.preventDefault();
   let cityInput = document.querySelector("#city-input");
-   searchCityData(cityInput.value)
+  searchCityData(cityInput.value);
 }
 //getting data
 function searchCityData(city) {
-let apiKey = "66decd6fe52d82f120eb1be8f6e6d5d8";
+  let apiKey = "66decd6fe52d82f120eb1be8f6e6d5d8";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature);
 }
 
-
+//displaying the data
 function showTemperature(response) {
-  
   let temperature = document.querySelector("#today-temp");
   let city = document.querySelector("h2");
   let humidity = document.querySelector("#humidity");
@@ -52,9 +51,41 @@ function showTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
+//displaying the forecast
+function showForecast() {
+  let forecast = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  forecastHTML =
+    forecastHTML +
+    `
+    <div class="col-2">
+      <div class="weather-forecast-day">Monday</div>
+      <img src="images/partly_cloudy.png" />
+      <div class="weather-forecast-temperatures">
+        <span class="weather-forecast-max">21°</span>
+        <span class="weather-forecast-min">18°</span>
+      </div>
+    </div>
+`;
+  forecastHTML =
+    forecastHTML +
+    `
+    <div class="col-2">
+      <div class="weather-forecast-day">Monday</div>
+      <img src="images/partly_cloudy.png" />
+      <div class="weather-forecast-temperatures">
+        <span class="weather-forecast-max">21°</span>
+        <span class="weather-forecast-min">18°</span>
+      </div>
+    </div>
+`;
+  forecastHTML = forecastHTML + `</div>`;
+  forecast.innerHTML = forecastHTML;
+}
+
 let selectCity = document.querySelector(".search-form");
 selectCity.addEventListener("submit", submitCity);
-
 
 //Local weather
 function localCity(event) {
@@ -73,7 +104,6 @@ function showPosition(position) {
 
 let currentCity = document.querySelector(".current-city");
 currentCity.addEventListener("click", localCity);
-
 
 let fahrenheitLink = document.querySelector("#fahrenheit-temperature");
 fahrenheitLink.addEventListener("click", changeToFahrenheit);
@@ -101,3 +131,4 @@ function changeToCelsius(event) {
 }
 
 searchCityData("London");
+showForecast();
