@@ -30,6 +30,7 @@ li {
 }
 .city {
   padding: 20px 0;
+  font-size: 40px;
 }
 
 .choose-city {
@@ -65,7 +66,7 @@ li {
 
 .today {
   width: 100%;
-  margin: 40px 20px;
+  margin: 30px 20px;
 }
 
 .today-temp {
@@ -96,7 +97,7 @@ footer {
   cursor: default;
   text-decoration: none;
   position: absolute;
-  right: 126px;
+  right: 118px;
   top: 12px;
 }
 
