@@ -1,5 +1,8 @@
 body {
   font-family: "Poppins", sans-serif;
+  color: white;
+  background-image: url("/images/background.jpg");
+  background-size: cover;
 }
 
 h1 {
@@ -21,6 +24,7 @@ li {
   padding: 20px;
   margin: 30px 30px 15px 30px;
   border-radius: 10px;
+  background-image: linear-gradient(-180deg, #9d65c9 25%, #27296d 95%);
 }
 .city {
   padding: 20px 0;
@@ -33,6 +37,11 @@ li {
 }
 
 .change-city {
+  background-color: #a393eb;
+}
+
+.current-city {
+  background-color: #a393eb;
 }
 
 .col {
