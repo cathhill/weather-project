@@ -10,6 +10,7 @@ body {
 h1 {
   margin-bottom: 0;
   font-size: 70px;
+  text-align: left;
 }
 
 ul {
@@ -97,8 +98,7 @@ footer {
   cursor: default;
   text-decoration: none;
   position: absolute;
-  right: 118px;
-  top: 12px;
+  top: 10px;
 }
 
 #units .active:hover {
@@ -107,11 +107,6 @@ footer {
 
 .weather-forecast {
   text-align: center;
-}
-
-.weather-forecast-day {
-}
-.weather-forecast-temperatures {
 }
 
 .weather-forecast-min {
