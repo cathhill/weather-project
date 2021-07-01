@@ -1,7 +1,8 @@
 body {
   font-family: "Poppins", sans-serif;
   color: white;
-  background-image: url("/images/background.jpg");
+  background: black;
+  background-image: url("../images/background.jpg");
   background-size: cover;
 }
 
@@ -22,7 +23,7 @@ li {
 .container {
   border: blue solid 2px;
   padding: 20px;
-  margin: 30px 30px 15px 30px;
+  margin: 30px 30px 5px 30px;
   border-radius: 10px;
   background-image: linear-gradient(-180deg, #9d65c9 25%, #27296d 95%);
 }
@@ -69,10 +70,11 @@ li {
 .today-temp {
   font-size: 80px;
 }
-
+.temp-unit {
+  position: relative;
+}
 #units {
   font-size: 15px;
-  position: relative;
   top: -40px;
 }
 
@@ -81,14 +83,20 @@ li {
   color: rgb(255, 230, 0);
 }
 
+a {
+  color: white;
+}
 footer {
   margin: 0 30px;
   font-size: 12px;
 }
 #units .active {
-  color: black;
+  color: white;
   cursor: default;
   text-decoration: none;
+  position: absolute;
+  right: 126px;
+  top: 12px;
 }
 
 #units .active:hover {
